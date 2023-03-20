@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Manrope:wght@500&display=swap');
+
+    body{
+    padding:0;
+    margin:0;
+    }
+
+/***** nav *****/
+
+    nav{
+        box-sizing:border-box;
+        position:fixed;
+        top:0;
+        background-color:inherit;
+        display:flex;
+        padding:16px 48px;
+        border-bottom:0px solid rgba(225, 225, 225, 0.056);
+        justify-content:space-between;
+        align-items:center;
+        z-index:10;
+        width:100vw;
+    }
+    nav *{
+        font-family: 'Manrope', sans-serif;
+        font-size:0.9rem;
+    }
+    .nav-main{
+        display:flex;
+        gap:32px;
+    }
+    .logo{
+        font-size:16px;
+        text-transform: uppercase;
+        font-weight:bold;
+        letter-spacing: 4px;
+        color:rgb(169, 185, 185);
+    }
+    .logo span{
+        
+        color:#006cf7;
+    }
+    .nav-links{
+        display:flex;
+        gap: 40px;
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color:rgb(169, 185, 185);
+        letter-spacing: -0.1px;
+        font-weight:200;
+    }
+    a:hover{
+        color:rgb(122, 120, 120);
+        transition: all 0.5s ease;
+    }
+    .nav-link{
+        text-decoration: none;
+    }
+
+
+/***** landing page *****/
+
+    .header{
+    font-family: 'Manrope', sans-serif;
+    font-size:3.5vw;
+    letter-spacing:0.3rem;
+
+    margin:0 16vw;
+    width:70vw;
+    }
+
+    span{
+    font-family: 'Lobster', cursive;
+    font-size:4.5rem;
+    letter-spacing:0rem;
+    
+    
+    }
+    .side{
+    height:100vh;
+    width:100%;
+    
+    position:absolute;
+    overflow:hidden;
+    
+    display:grid;
+    place-items:center;
+    }
+
+    #left-side{
+    background-color:rgb(26, 25, 25);
+    color:rgba(200, 200, 200);
+    
+    width:100vw;
+    z-index:1;
+    
+    }
+    #right-side{
+    background-color:rgba(250, 250, 250);
+    color:rgb(26, 25, 25);
+    }
+

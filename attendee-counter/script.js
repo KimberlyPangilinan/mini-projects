@@ -1,21 +1,31 @@
-let count = 0;
-let saved=[];
+let saved = JSON.parse(localStorage.getItem("mySaved"));
+
+if (saved === null) {
+    saved = [];
+}
+
 count = Number(localStorage.getItem("myCount"));
 document.getElementById("count").innerHTML = count;
 
+let save = localStorage.getItem("mySaved");
+document.getElementById("array").innerHTML = save;
 
-const handleClick=()=>{
-    count= count+1;
+const handleClick = () => {
+    count = count + 1;
     document.getElementById("count").innerHTML = count;
     localStorage.setItem("myCount", count);
 }
 
-const handleSave=()=>{
-    
+const handleSave = () => {
     saved.push(count);
-    console.log(saved);
-    count=0;
+    localStorage.setItem("mySaved", JSON.stringify(saved));
+    document.getElementById("array").innerHTML = saved.join(", ");
+    count = 0;
     document.getElementById("count").innerHTML = count;
-
 }
 
+const handleReset = () => {
+    localStorage.clear();
+    document.getElementById("count").innerHTML = 0;
+    document.getElementById("array").innerHTML = "";
+}
